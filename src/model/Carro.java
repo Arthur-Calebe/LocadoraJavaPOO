@@ -1,11 +1,13 @@
 package model;
 
+import enums.CategoriaVeiculo;
+
 public class Carro extends Veiculo {
 
     private int quantidadePortas;
 
-    public Carro(String nome, int anoFabricacao, String modelo, String placaVeiculo, boolean disponibilidadae) {
-        super(nome, anoFabricacao, modelo, placaVeiculo, disponibilidadae);
+    public Carro(int anoFabricacao, String modelo, String placaVeiculo, boolean disponibilidade, CategoriaVeiculo categoria, int quantidadePortas) {
+        super(anoFabricacao, modelo, placaVeiculo, disponibilidade, categoria);
         this.quantidadePortas = quantidadePortas;
     }
 

@@ -1,38 +1,44 @@
 package model;
 
+import enums.CategoriaVeiculo;
+
 public class Veiculo {
 
-    private String nome;
-    private int anoFabricacao;
-    private String modelo;
-    private String placaVeiculo;
-    private boolean disponibilidadae;
+    protected int anoFabricacao;
+    protected String modelo;
+    protected String placaVeiculo;
+    protected CategoriaVeiculo categoria;
+    protected boolean disponibilidade;
 
-    public Veiculo(String nome, int anoFabricacao, String modelo, String placaVeiculo, boolean disponibilidadae) {
-        this.nome = nome;
+    public Veiculo(int anoFabricacao, String modelo, String placaVeiculo, boolean disponibilidadae, CategoriaVeiculo categoria) {
         this.anoFabricacao = anoFabricacao;
         this.modelo = modelo;
         this.placaVeiculo = placaVeiculo;
-        this.disponibilidadae = true;
+        this.disponibilidade = disponibilidade;
+        this.categoria = categoria;
+    }
+
+    public double calcularValorDiaria(){
+        return categoria.getValorDiaria();
     }
 
     @Override
     public String toString() {
         return "Veiculo{" +
-                "nome = '" + nome + '\'' +
-                ", anoFabricacao = " + anoFabricacao +
+                "anoFabricacao = " + anoFabricacao +
                 ", modelo = '" + modelo + '\'' +
                 ", placaVeiculo = '" + placaVeiculo + '\'' +
-                ", disponibilidadae = " + disponibilidadae +
+                ", categoria = " + categoria +
+                ", disponibilidade = " + disponibilidade +
                 '}';
     }
 
-    public String getNome() {
-        return nome;
+    public CategoriaVeiculo getCategoria() {
+        return categoria;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setCategoria(CategoriaVeiculo categoria) {
+        this.categoria = categoria;
     }
 
     public int getAnoFabricacao() {
@@ -59,11 +65,11 @@ public class Veiculo {
         this.placaVeiculo = placaVeiculo;
     }
 
-    public boolean isDisponibilidadae() {
-        return disponibilidadae;
+    public boolean isDisponibilidade() {
+        return disponibilidade;
     }
 
-    public void setDisponibilidadae(boolean disponibilidadae) {
-        this.disponibilidadae = disponibilidadae;
+    public void setDisponibilidade(boolean disponibilidade) {
+        this.disponibilidade = disponibilidade;
     }
 }
