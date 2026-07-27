@@ -87,13 +87,13 @@ public class Main {
     }
     private static void cadastrarCliente() {
         System.out.print("Nome: ");
-        String nome = scanner.next();
+        String nome = scanner.nextLine();
 
         System.out.print("CPF: ");
-        String cpf = scanner.next();
+        String cpf = scanner.nextLine();
 
         System.out.print("Telefone: ");
-        String telefone = scanner.next();
+        String telefone = scanner.nextLine();
 
         Cliente cliente = new Cliente(nome, cpf, telefone);
         locadora.cadastrarClientes(cliente);
@@ -103,10 +103,10 @@ public class Main {
 
     private static void alugarVeiculo() {
         System.out.print("Placa do veiculo: ");
-        String placa = scanner.next();
+        String placa = scanner.nextLine();
 
         System.out.print("CPF do cliente: ");
-        String cpf = scanner.next();
+        String cpf = scanner.nextLine();
 
         System.out.print("Quantidade de dias: ");
         int dias = scanner.nextInt();
