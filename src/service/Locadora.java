@@ -76,4 +76,28 @@ public class Locadora {
             }
         }
     }
+    public Veiculo buscarVeiculoPorPlaca(String placa) {
+        for (int i = 0; i < totalVeiculos; i++) {
+            if (veiculos[i].getPlacaVeiculo().equals(placa)) {
+                return veiculos[i];
+            }
+        }
+        return null;
+    }
+    public Cliente buscarClientePorCpf(String cpf) {
+        for (int i = 0; i < totalClientes; i++) {
+            if (clientes[i].getCpf().equals(cpf)) {
+                return clientes[i];
+            }
+        }
+        return null;
+    }
+    public Locacao buscarLocacaoPorId(int id) {
+        for (int i = 0; i < totalLocacoes; i++) {
+            if (locacoes[i].getId() == id) {
+                return locacoes[i];
+            }
+        }
+        return null;
+    }
 }
