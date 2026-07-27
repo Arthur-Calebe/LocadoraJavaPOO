@@ -16,7 +16,7 @@ public class Locacao {
     private FormaPagamento formaPagamento;
     private StatusLocacao status;
 
-    public Locacao(int id, Cliente cliente, Veiculo veiculo, int quantidadeDias, FormaPagamento formaPagamento, StatusLocacao status) {
+    public Locacao(Cliente cliente, Veiculo veiculo, int quantidadeDias, FormaPagamento formaPagamento) {
         this.id = contadorId++;
         this.cliente = cliente;
         this.veiculo = veiculo;
