@@ -102,6 +102,10 @@ public class Main {
     }
 
     private static void alugarVeiculo() {
+        System.out.println("=== Veiculos disponiveis ===");
+        locadora.listarVeiculosDisponiveis();
+        System.out.println();
+
         System.out.print("Placa do veiculo: ");
         String placa = scanner.nextLine();
 
