@@ -10,7 +10,7 @@ public class Veiculo {
     protected CategoriaVeiculo categoria;
     protected boolean disponibilidade;
 
-    public Veiculo(int anoFabricacao, String modelo, String placaVeiculo, boolean disponibilidadae, CategoriaVeiculo categoria) {
+    public Veiculo(int anoFabricacao, String modelo, String placaVeiculo, boolean disponibilidade, CategoriaVeiculo categoria) {
         this.anoFabricacao = anoFabricacao;
         this.modelo = modelo;
         this.placaVeiculo = placaVeiculo;

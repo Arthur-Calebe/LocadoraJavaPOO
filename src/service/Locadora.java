@@ -70,6 +70,9 @@ public class Locadora {
     }
 
     public void listarLocacoesAtivas() {
+        if (totalLocacoes == 0){
+            System.out.println("Nenhuma locação ativa no momento!!");
+        }
         for (int i = 0; i < totalLocacoes; i++) {
             if (locacoes[i].getStatus() == StatusLocacao.ATIVA) {
                 System.out.println(locacoes[i]);

@@ -23,6 +23,7 @@ public class Main {
             System.out.print("Escolha uma opçãoo: ");
 
             opcao = scanner.nextInt();
+            scanner.nextLine();
 
             switch (opcao) {
                 case 1:
@@ -56,29 +57,34 @@ public class Main {
 
     private static void cadastrarVeiculo() {
         System.out.print("Placa: ");
-        String placa = scanner.next();
+        String placa = scanner.nextLine();
 
         System.out.print("Modelo: ");
-        String modelo = scanner.next();
+        String modelo = scanner.nextLine();
 
         System.out.print("Ano de fabricação: ");
         int ano = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("Categoria (1-ECONOMICO, 2-INTERMEDIARIO, 3-LUXO): ");
         int opcaoCategoria = scanner.nextInt();
+        scanner.nextLine();
         CategoriaVeiculo categoria = CategoriaVeiculo.values()[opcaoCategoria - 1];
 
         System.out.println("Tipo (1-Carro, 2-Moto): ");
         int tipo = scanner.nextInt();
+        scanner.nextLine();
 
         if (tipo == 1) {
             System.out.print("Quantidade de portas: ");
             int portas = scanner.nextInt();
+            scanner.nextLine();
             Carro carro = new Carro(ano, modelo, placa, true, categoria, portas);
             locadora.cadastrarVeiculo(carro);
         } else {
             System.out.print("Cilindrada: ");
             int cilindrada = scanner.nextInt();
+            scanner.nextLine();
             Moto moto = new Moto(ano, modelo, placa, true, categoria, cilindrada);
             locadora.cadastrarVeiculo(moto);
         }
