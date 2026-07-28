@@ -2,6 +2,7 @@ package model;
 
 import enums.CategoriaVeiculo;
 
+    // Essa é a classe "pai" do projeto
 public class Veiculo {
 
     protected int anoFabricacao;

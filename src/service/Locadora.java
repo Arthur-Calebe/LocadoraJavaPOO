@@ -9,10 +9,12 @@ import model.Veiculo;
 public class Locadora {
     public static final int CAPACIDADE_MAXIMA = 50;
 
+    // Uso isso para armazenar a quantidade de veículos, clientes, locações, localmente no projeto
     private Veiculo[] veiculos = new Veiculo[CAPACIDADE_MAXIMA];
     private Cliente[] clientes = new Cliente[CAPACIDADE_MAXIMA];
     private Locacao[] locacoes = new Locacao[CAPACIDADE_MAXIMA];
 
+    // todos inicialização com nenhum com 0 já que nada foi feito
     private int totalVeiculos = 0;
     private int totalClientes = 0;
     private int totalLocacoes = 0;
@@ -35,6 +37,7 @@ public class Locadora {
         totalClientes++;
     }
 
+    // Se já estiver alugado criei essa lógica para não deixar ser alugado mesmo assim
     public Locacao alugar(Cliente cliente, Veiculo veiculo, int quantidadeDias, FormaPagamento formaPagamento) {
         if (!veiculo.isDisponibilidade()) {
             System.out.println("Veiculo indisponivel para locação!");

@@ -5,7 +5,9 @@ import enums.StatusLocacao;
 
 public class Locacao {
 
+    // Aqui criei uma forma de colocar um ID em todas as movimentações que ocorrer: alugar um veículo, devolver...
     private static int contadorId = 1;
+    // utilizei o "final" para a multa só ser definida aqui
     public static final double MULTA_ATRASO_DIARIO = 30.0;
 
     private final int id;
@@ -26,6 +28,7 @@ public class Locacao {
         this.diasAtraso = 0;
     }
 
+    // Aqui utilizei o toString para definir como os dados da locação serão exibidos em formato de texto
     @Override
     public String toString() {
         return "Locacao{" +
@@ -40,6 +43,7 @@ public class Locacao {
                 '}';
     }
 
+    // aqui fiz uma lógica para calcular quanto o cliente ira pagar conforme o uso do veiculo
     public double calcularValorTotal() {
         double total = veiculo.calcularValorDiaria() * quantidadeDias;
 
@@ -58,6 +62,7 @@ public class Locacao {
         this.diasAtraso = diasAtraso;
     }
 
+    // Quando o veiculo for devolvido automáticamente ele podera ser alugado de novo
     public void finalizar() {
         status = StatusLocacao.FINALIZADA;
         veiculo.setDisponibilidade(true);

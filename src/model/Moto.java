@@ -2,6 +2,7 @@ package model;
 
 import enums.CategoriaVeiculo;
 
+// Moto como também é um veículo usa o "extends" para herdar as características da classe Veiculo
 public class Moto extends Veiculo{
 
     private int cilindrada;

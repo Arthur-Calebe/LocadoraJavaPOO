@@ -11,6 +11,7 @@ public class Cliente {
         Endereco = endereco;
     }
 
+    // Aqui aparece o toString para definir como o objeto será representado em texto
     @Override
     public String toString() {
         return "Cliente{" +
@@ -20,6 +21,7 @@ public class Cliente {
                 '}';
     }
 
+    // O get e set servem para controlar o acesso aos objetos
     public String getNome() {
         return nome;
     }
