@@ -40,12 +40,12 @@ public class Locadora {
     // Se já estiver alugado criei essa lógica para não deixar ser alugado mesmo assim
     public Locacao alugar(Cliente cliente, Veiculo veiculo, int quantidadeDias, FormaPagamento formaPagamento) {
         if (!veiculo.isDisponibilidade()) {
-            System.out.println("Veiculo indisponivel para locação!");
+            System.out.println("Veiculo indisponivel para locação!!");
             return null;
         }
 
         if (totalLocacoes >= CAPACIDADE_MAXIMA) {
-            System.out.println("Capacidade máxima de locações atingida!");
+            System.out.println("Capacidade máxima de locações atingida!!");
             return null;
         }
 
